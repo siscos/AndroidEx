@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">InterviewApp</string>
+    <string name="facebook_app_id">350245611812716</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="permission_not_granted">Unable to perform selected action because permissions were not granted.</string>
+    <string name="ok">OK</string>
+    <string name="success">Success</string>
+    <string name="error">Error</string>
+    <string name="post">Create Post</string>
+    <string name="loading">loading</string>
+    <string name="spinnerText">select</string>
+    <string name="posts">Posts</string>
+</resources>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:facebook="http://schemas.android.com/apk/res-auto"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.siscos.interviewapp.MainActivity">
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="right"
+            android:layout_marginBottom="10dp" />
+
+        <RelativeLayout
+            android:id="@+id/profileLayout"
+            android:layout_below="@id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.facebook.login.widget.ProfilePictureView
+                android:id="@+id/profilePicture"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/displayName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@id/profilePicture"
+                android:textColor="#FF000000"
+                android:textSize="18sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@id/profileLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+
+            <ListView
+                android:id="@+id/pageNameListView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:listSelector="#00D8FF"/>
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:textColor="#FF000000"
+                android:background="@drawable/image_border"
+                android:gravity="top"
+                android:layout_below="@id/pageNameListView"/>
+
+            <Button
+                android:id="@+id/postButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/post"
+                android:layout_below="@id/editText"
+                android:layout_alignRight="@id/editText"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/postButton"
+                android:id="@+id/GalleryBtn" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Published"
+                android:layout_below="@id/editText"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/postButton"
+                android:id="@+id/published" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editText"
+                android:layout_toLeftOf="@id/published"
+                android:id="@+id/typeSelSpinner" />
+
+            <TextView
+                android:id="@+id/postTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/postButton"
+                android:layout_marginTop="5dp"
+                android:text="@string/posts"
+                android:background="@color/com_facebook_blue"
+                android:textColor="#FFFFFFFF"
+                android:textSize="18sp"/>
+
+            <LinearLayout
+                android:id="@+id/postLayout"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/postTextView">
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,8 @@
+*.class
+/app/build/intermediates
+.gradle/2.14.1/taskArtifacts/cache.properties.lock
+/app/app.iml
+/app/build/
+/.gradle
+/.idea
+/build
